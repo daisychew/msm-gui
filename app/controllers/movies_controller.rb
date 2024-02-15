@@ -23,7 +23,7 @@ class MoviesController < ApplicationController
     @movie.duration = params.fetch("query_duration")
     @movie.description = params.fetch("query_description")
     @movie.image = params.fetch("query_image")
-    @movie.director_id = params.fetch("director_id")
+    @movie.director_id = params.fetch("query_director_id")
 
     @movie.save
 
@@ -39,11 +39,11 @@ class MoviesController < ApplicationController
     @movie.duration = params.fetch("query_duration")
     @movie.description = params.fetch("query_description")
     @movie.image = params.fetch("query_image")
-    @movie.director_id = params.fetch("director_id")
+    @movie.director_id = params.fetch("query_director_id")
 
     @movie.save
   
-    redirect_to("/actors/#{@actor.id}")
+    redirect_to("/movies/#{@movie.id}")
   end
 
   def destroy
