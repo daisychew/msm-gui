@@ -23,6 +23,8 @@ class ActorsController < ApplicationController
     @actor.bio = params.fetch("query_bio")
     @actor.image = params.fetch("query_image")
 
+    @actor.save
+
     redirect_to("/actors")
   end
 

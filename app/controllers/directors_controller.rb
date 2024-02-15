@@ -45,6 +45,8 @@ class DirectorsController < ApplicationController
     @director.bio = params.fetch("query_bio")
     @director.image = params.fetch("query_image")
 
+    @director.save
+
     redirect_to("/directors")
   end
 

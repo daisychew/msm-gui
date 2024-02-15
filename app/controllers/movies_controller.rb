@@ -25,6 +25,8 @@ class MoviesController < ApplicationController
     @movie.image = params.fetch("query_image")
     @movie.director_id = params.fetch("director_id")
 
+    @movie.save
+
     redirect_to("/movies")
   end
 
@@ -50,6 +52,6 @@ class MoviesController < ApplicationController
 
     @movie.destroy
 
-    redirect_to("/actors")
+    redirect_to("/movies")
   end
 end
